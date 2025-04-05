@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Professional Resume Builder</h1>
+            <p>Create your perfect resume in minutes - no design skills needed!</p>
+        </header>
+
+        <div class="builder-container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2>Your Information</h2>
+                    <div class="template-selector">
+                        <label for="template">Choose a Template:</label>
+                        <select id="template">
+                            <option value="template1">Professional Blue</option>
+                            <option value="template2">Modern Green</option>
+                            <option value="template3">Elegant Gray</option>
+                        </select>
+                    </div>
+                </div>
+
+                <form id="resume-form">
+                    <div class="form-group">
+                        <h3>Personal Details</h3>
+                        <div class="profile-upload">
+                            <div class="profile-preview" id="profile-preview">
+                                <img src="assets/default-profile.jpg" alt="Profile Preview" id="profile-image">
+                            </div>
+                            <input type="file" id="profile-upload" accept="image/*">
+                            <label for="profile-upload" class="upload-btn">Upload Photo</label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="job-title">Job Title</label>
+                                <input type="text" id="job-title" placeholder="Software Engineer" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" placeholder="123 Main St, City, Country">
+                            </div>
+                            <div class="form-col">
+                                <label for="linkedin">LinkedIn</label>
+                                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Professional Summary</h3>
+                        <textarea id="summary" rows="4" placeholder="Experienced professional with 5+ years in..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Work Experience</h3>
+                        <div id="experience-container">
+                            <div class="experience-item">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Job Title</label>
+                                        <input type="text" class="exp-title" placeholder="Senior Developer">
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Company</label>
+                                        <input type="text" class="exp-company" placeholder="Tech Corp Inc.">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Start Date</label>
+                                        <input type="month" class="exp-start">
+                                    </div>
+                                    <div class="form-col">
+                                        <label>End Date</label>
+                                        <input type="month" class="exp-end">
+                                    </div>
+                                    <div class="form-col checkbox-col">
+                                        <label>
+                                            <input type="checkbox" class="exp-current"> Currently working here
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col full-width">
+                                        <label>Description</label>
+                                        <textarea class="exp-description" rows="3" placeholder="Responsibilities and achievements..."></textarea>
+                                    </div>
+                                </div>
+                                <button type="button" class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-experience" class="add-btn">Add Another Position</button>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Education</h3>
+                        <div id="education-container">
+                            <div class="education-item">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Degree</label>
+                                        <input type="text" class="edu-degree" placeholder="Bachelor of Science">
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Field of Study</label>
+                                        <input type="text" class="edu-field" placeholder="Computer Science">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Institution</label>
+                                        <input type="text" class="edu-institution" placeholder="University of Technology">
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Graduation Year</label>
+                                        <input type="month" class="edu-year">
+                                    </div>
+                                </div>
+                                <button type="button" class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-education" class="add-btn">Add Another Education</button>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Skills</h3>
+                        <div id="skills-container">
+                            <div class="form-row skill-row">
+                                <div class="form-col">
+                                    <input type="text" class="skill-name" placeholder="JavaScript">
+                                </div>
+                                <div class="form-col">
+                                    <select class="skill-level">
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="advanced" selected>Advanced</option>
+                                        <option value="expert">Expert</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-skill" class="add-btn">Add Another Skill</button>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Additional Sections</h3>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="languages">Languages</label>
+                                <input type="text" id="languages" placeholder="English (Fluent), Spanish (Basic)">
+                            </div>
+                            <div class="form-col">
+                                <label for="certifications">Certifications</label>
+                                <input type="text" id="certifications" placeholder="AWS Certified, PMP">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col full-width">
+                                <label for="projects">Projects</label>
+                                <textarea id="projects" rows="3" placeholder="Notable projects you've worked on..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="preview-btn">Preview Resume</button>
+                        <button type="button" id="download-btn">Download PDF</button>
+                        <button type="button" id="reset-btn">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-section">
+                <h2>Resume Preview</h2>
+                <div class="resume-preview" id="resume-preview">
+                    <!-- Resume preview will be generated here -->
+                    <div class="preview-placeholder">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Your resume preview will appear here</p>
+                        <p>Fill out the form to see the preview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Why Use Our Resume Builder?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Professional Designs</h3>
+                    <p>Choose from multiple templates designed by HR professionals</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Save Time</h3>
+                    <p>Create a perfect resume in minutes instead of hours</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDF Download</h3>
+                    <p>Download your resume as PDF ready to send to employers</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on all devices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Professional Resume Builder. All rights reserved.</p>
+    </footer>
+
+    <!-- Include jsPDF library via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="scripts/html2pdf.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

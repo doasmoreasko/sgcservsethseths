@@ -1,0 +1,131 @@
+/* Professional Blue Template */
+.resume-template1 {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-template1 .resume-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 20px;
+}
+
+.resume-template1 .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 3px solid #3498db;
+}
+
+.resume-template1 .header-info {
+    flex: 1;
+}
+
+.resume-template1 .name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.resume-template1 .title {
+    font-size: 18px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.resume-template1 .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.resume-template1 .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.resume-template1 .contact-item i {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+.resume-template1 .section {
+    margin-bottom: 25px;
+}
+
+.resume-template1 .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.resume-template1 .summary-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.resume-template1 .experience-item,
+.resume-template1 .education-item {
+    margin-bottom: 20px;
+}
+
+.resume-template1 .job-title,
+.resume-template1 .degree {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.resume-template1 .company,
+.resume-template1 .institution {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.resume-template1 .date {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 5px 0;
+}
+
+.resume-template1 .job-description,
+.resume-template1 .education-details {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.resume-template1 .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resume-template1 .skill-item {
+    background: #f5f7fa;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    border-left: 3px solid #3498db;
+}
+
+.resume-template1 .additional-info {
+    font-size: 14px;
+    line-height: 1.6;
+}
